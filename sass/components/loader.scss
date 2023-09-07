@@ -16,12 +16,11 @@
   background-color: rgba($color: #000000, $alpha: 0.6);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  overflow: hidden;
 
   //comportement
   position: fixed;
   left: 0;
-  top: 0; 
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,25 +31,29 @@
   min-height: 100%;
   z-index: 2000;
 
-  animation: loader 2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  animation: loader 3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
   &__content {
-    @include font-roboto(18px,300);
+    //comportement
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 80%;
+    padding: 2% 0;
+   
+    
+    //style
+    @include font-roboto(18px, 300);
+    text-align: center;
     background-color: $--background;
     border: rem(2) solid darken($--background, 50);
     box-shadow: 9.5px 9px 9px -3.5px darken($--background-3, 0.25);
     border-radius: 20px;
-    gap: 20px;
-    width: 90%;
-    padding: 2% 0;
-    text-align: center;
 
-    @include media(desktop){
-       width: 40%;
+    @include media(desktop) {
+      width: 40%;
     }
   }
 
@@ -62,45 +65,41 @@
     & > svg {
       width: 70%;
     }
-  
-}
-&__text{
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  gap: rem(8);
-  & > div{
-    margin-bottom: 4px;
   }
-
-  
+  &__text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: rem(8);
+    & > div {
+      margin-bottom: 4px;
+    }
+  }
 }
-  
-}
- .dots {
+.dots {
   width: rem(36);
   height: rem(6);
-  background: radial-gradient(circle closest-side,$text-color 90%,#0000) 0%   50%,
-       radial-gradient(circle closest-side,$text-color 90%,#0000) 50%  50%,
-       radial-gradient(circle closest-side,$text-color 90%,#0000) 100% 50%;
-  background-size: calc(100%/3) 100%;
+  background: radial-gradient(circle closest-side, $text-color 90%, #0000) 0%
+      50%,
+    radial-gradient(circle closest-side, $text-color 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, $text-color 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 100%;
   background-repeat: no-repeat;
   animation: dots-zcf63l 1.4s infinite linear;
 }
 
 @keyframes dots-zcf63l {
   33% {
-     background-size: calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%;
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
   }
 
   50% {
-     background-size: calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%;
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
   }
 
   66% {
-     background-size: calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%;
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
   }
 }
 /***************************************************

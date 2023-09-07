@@ -11,21 +11,14 @@
 @import "./components/card-menu.scss"; //Contient le component Card-menu - Index.html
 @import "./components/loader.scss"; //Contient le component Card-menu - Index.html
 
-
-
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
+  width: 100%;
 }
 
 header {
@@ -34,8 +27,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  gap: -0.5px;
 
   // Size
   width: 100%;
@@ -43,7 +34,7 @@ header {
   img {
     display: flex;
     height: rem(25);
-    padding: 14px 89px 13px 89px;
+    padding: 14px 0px 14px 0px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -51,23 +42,23 @@ header {
 }
 
 .locate {
-  background-color: $--background-2;
-  box-shadow: inset 0 5px 10px -10px;
-
-  //   Size
-  width: 100%;
-  padding: rem(15) rem(0) rem(15) rem(65);
 
   // Behavior
+  box-sizing: border-box;
+  width: 100%;
+  padding: rem(15) rem(0) rem(15) rem(80);
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  text-decoration: none;
-  gap: rem(7);
+  justify-content: center;
+  gap: 7px;
+  //style
+  background-color: $--background-2;
+  box-shadow: inset 0 5px 10px -10px;
+   
 
   & input {
     all: unset;
+    //style 
     @include font-roboto(16px, 500);
     background-color: $--background-2;
   }
@@ -80,6 +71,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
 
 #about {
   width: 100%;
@@ -100,7 +92,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: rem(24);
-  padding: 0px 10px;
+  padding: 0px 2%;
   margin: rem(50) 0 rem(50) 0;
 
   .process__container {
@@ -118,7 +110,7 @@ header {
 
   @include media(desktop) {
     max-width: 1400px;
-    padding: 0px 180px;
+    padding: 0px 10%;
   }
 }
 
@@ -126,30 +118,28 @@ header {
 
 .restaurants {
   //styles
-  box-sizing: border-box;
   background-color: $--background-2;
-  padding: 0px 50px;
 
   &__content {
     //comportements
+    box-sizing: border-box;
     width: 100%;
     max-width: rem(355);
-    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: rem(15);
-    padding: 0px 10px;
+    padding: 0px 2%;
     margin: rem(50) 0 rem(50) 0;
 
     @include media(tablet) {
       max-width: 1400px;
-      padding: 0px 50px;
+      padding: 0px 10%;
+      gap:  rem(30);
     }
 
-    @include media(desktop) {
-      padding: 0px 180px;
-    }
+   
   }
 }
 
@@ -163,7 +153,8 @@ header {
 
   @include media(tablet) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-around; 
+    gap: 30px;
   }
 }
 
