@@ -32,7 +32,7 @@
   min-height: 100%;
   z-index: 2000;
 
-  animation: loader 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  animation: loader 2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
   &__content {
     @include font-roboto(18px,300);
