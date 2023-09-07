@@ -138,17 +138,11 @@
 }
 .card-menu__content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0.9375rem 1.25rem;
 }
-.card-menu__title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.015625rem;
-}
-.card-menu__title > h3 {
+.card-menu__content > h3 {
   font-family: Roboto !important;
   font-size: 1.125rem;
   font-weight: 700;
@@ -157,7 +151,9 @@
   color: black;
 }
 .card-menu__heart {
-  position: relative;
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
 }
 .card-menu input {
   appearance: none;
