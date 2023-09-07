@@ -1,0 +1,291 @@
+@use "sass:math";
+
+// GESTION DES FICHIERS
+//      SCSS
+@import "setting.scss"; // Setting permet la gestion des éléments du CSS et l'import des différents components.
+@import "./components/function.scss"; // Contient les fonctions
+@import "./components/mixins.scss"; //  Contient les mixins
+@import "./components/font.scss"; // Contient les sélecteurs global pour la typographie
+@import "./components/btn.scss"; //  Contient les btns du site
+@import "./components/card-process.scss"; //Contient le component Card-process - Index.html
+@import "./components/card-menu.scss"; //Contient le component Card-menu - Index.html
+@import "./components/loader.scss"; //Contient le component Card-menu - Index.html
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+}
+
+header {
+  // Behavior
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  gap: -0.5px;
+
+  // Size
+  width: 100%;
+
+  img {
+    display: flex;
+    height: rem(25);
+    padding: 14px 89px 13px 89px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+.locate {
+  background-color: $--background-2;
+  box-shadow: inset 0 5px 10px -10px;
+
+  //   Size
+  width: 100%;
+  padding: rem(15) rem(0) rem(15) rem(65);
+
+  // Behavior
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  gap: rem(7);
+
+  & input {
+    all: unset;
+    @include font-roboto(16px, 500);
+    background-color: $--background-2;
+  }
+}
+
+.full-container {
+  // Behavior
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $--background;
+  gap: rem(20);
+  padding: rem(30) rem(20) rem(70) rem(20);
+}
+
+#process {
+  max-width: rem(355);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding: 0px 10px;
+  margin: rem(50) 0 rem(50) 0;
+
+  .process__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    @include media(desktop) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  @include media(desktop) {
+    max-width: 1400px;
+    padding: 0px 180px;
+  }
+}
+
+// ---------------- Section RESTAURANT --------------------------
+
+.restaurants {
+  //styles
+  box-sizing: border-box;
+  background-color: $--background-2;
+  padding: 0px 50px;
+
+  &__content {
+    //comportements
+    width: 100%;
+    max-width: rem(355);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(15);
+    padding: 0px 10px;
+    margin: rem(50) 0 rem(50) 0;
+
+    @include media(tablet) {
+      max-width: 1400px;
+      padding: 0px 50px;
+    }
+
+    @include media(desktop) {
+      padding: 0px 180px;
+    }
+  }
+}
+
+.new-restaurants,
+.result-restaurants {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @include media(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+// Génére un badge "Nouveau"
+.new-restaurants .card-menu::after {
+  content: "Nouveau";
+  //size & form
+  width: rem(80);
+  height: rem(30);
+  border-radius: rem(2);
+  // Shadow
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  //color
+  background-color: $color--sucess-1;
+  color: $color--sucess;
+  //font
+  text-align: center;
+  //position
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: rem(15);
+  top: rem(15);
+  z-index: 2;
+}
+
+//---------------------FOOTER-----------------------
+footer {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding: 30px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  background: $--grey;
+
+  @include media(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: end;
+    gap: rem(45);
+  }
+
+  .logo {
+    all: unset;
+    // comportement
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20);
+
+    //style
+    cursor: pointer;
+    color: white;
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include media(tablet) {
+      margin: 0;
+    }
+    @include media(desktop) {
+      margin-left: rem(60);
+    }
+  }
+  ul {
+    //comportement
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    @include media(desktop) {
+      flex-direction: row;
+      gap: rem(20);
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+  }
+
+  .item1 {
+    @include media(tablet) {
+      order: 2;
+    }
+    @include media(desktop) {
+      order: 3;
+    }
+  }
+
+  .item2 {
+    @include media(tablet) {
+      order: 1;
+    }
+    @include media(desktop) {
+      order: 1;
+    }
+  }
+
+  .item3 {
+    @include media(tablet) {
+      order: 3;
+    }
+    @include media(desktop) {
+      order: 2;
+    }
+  }
+}

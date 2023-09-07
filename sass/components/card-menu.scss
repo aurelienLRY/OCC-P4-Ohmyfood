@@ -1,0 +1,96 @@
+//fichier réunissant les sélecteurs pour Card-menu
+.card-menu {
+  display: flex;
+  flex-direction: column;
+   max-width: rem(490);
+  min-width: rem(275);
+  width: 100%;
+  border-radius: rem(15);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+ 
+
+  a{
+    all: unset; 
+    cursor: pointer;
+    display: flex;
+   flex-direction: column;
+  }
+
+  img {
+    max-height: rem(200);
+    align-self: stretch;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    opacity: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(15) rem(20);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: rem(0.25);
+  }
+
+  &__title > h3 {
+    @include font-roboto(rem(18), 700);
+  }
+
+  &__heart {
+    position: relative;
+  }
+
+  input {
+    appearance: none;
+    cursor: pointer;
+    width: rem(26);
+    height: rem(26);
+    position: relative;
+    z-index: 4;
+
+    &:checked,
+    &:hover {
+      & + svg {
+        & .svg__heart--bgcolor {
+          opacity: 1;
+          transform: scale(1);
+        }
+        & .svg__heart {
+          opacity: 0; 
+          transform: scale(0);
+        }
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: -1px;
+    height: rem(26);
+    
+  }
+
+  .svg__heart {
+    fill: #000000;
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+    z-index: 3;
+  }
+
+  .svg__heart--bgcolor {
+    opacity: 0;
+    transform-origin: bottom;
+    transform: scale(0);
+    transition: all 350ms ease-in-out;
+    z-index: 2;
+  }
+}
+
+

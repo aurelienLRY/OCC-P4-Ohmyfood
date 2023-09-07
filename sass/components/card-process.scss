@@ -1,0 +1,59 @@
+.card-process {
+  //forme
+  box-sizing: border-box;
+  max-width: rem(322);
+  max-height: rem(72);
+  min-width: rem(280); 
+  min-height: rem(62);
+  padding: 0px 10px 0px 30px;
+  border-radius: rem(20);
+
+  //comportement
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  //style
+  background-color: $--background;
+  box-shadow: 0px 3px 15px -10px;
+
+  &__round {
+    //form
+    width: rem(24);
+    height: rem(24);
+    //style
+    background-color: $color--primary;
+    border-radius: rem(24);
+    @include font-roboto(14px, 500);
+    color: white;
+    //comportement
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //position
+    position: absolute;
+    top: center;
+    left: rem(-12);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(20);
+
+    & > i {
+      font-size: rem(19);
+      color: $--grey-1;
+    }
+
+    & .color-primary {
+      color: $color--primary;
+    }
+
+    & > h3 {
+      @include font-roboto(16px, 500);
+    }
+  }
+}
