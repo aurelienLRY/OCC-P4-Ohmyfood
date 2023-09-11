@@ -31,7 +31,7 @@
   min-height: 100%;
   z-index: 2000;
 
-  animation: loader 3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  animation: loader 0s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
   &__content {
     //comportement

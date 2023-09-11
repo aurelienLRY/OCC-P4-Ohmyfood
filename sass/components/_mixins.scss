@@ -1,0 +1,95 @@
+//BREACKPOINTS
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map.";
+  }
+}
+
+
+// TYPOGRAPHIES
+@mixin font-roboto($size: 17px, $weignt: 300) {
+  font-family: Roboto !important;
+  font-size: $size;
+  font-weight: $weignt;
+  font-style: normal;
+  line-height: normal;
+  color: $text-color;
+}
+
+@mixin font-title_menu {
+  font-family: Roboto;
+  font-style: normal;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin font-sub_title_menu {
+  font-family: Roboto;
+  font-style: normal;
+  line-height: normal;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+// ANIMATION & TRANSITION
+
+//mixin pour l'animation du coeur
+$z : 1 !default; 
+
+@mixin heart($z) {
+  &__heart {
+    position: relative;
+    z-index: $z;
+  }
+
+  input {
+    appearance: none;
+    cursor: pointer;
+    width: rem(26);
+    height: rem(26);
+    position: absolute;
+    left: center;
+    top: center;
+    z-index: $z + 3;
+
+    &:checked,
+    &:hover {
+      & + svg {
+        & .svg__heart--bgcolor {
+          opacity: 1;
+          transform: scale(1);
+        }
+        & .svg__heart {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: -1px;
+    height: rem(26);
+  }
+
+  .svg__heart {
+    fill: #000000;
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+    z-index: $z+2;
+  }
+
+  .svg__heart--bgcolor {
+    opacity: 0;
+    transform-origin: bottom;
+    transform: scale(0);
+    transition: all 350ms ease-in-out;
+    z-index: $z+1;
+  }
+}

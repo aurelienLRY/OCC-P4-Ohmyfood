@@ -1,0 +1,36 @@
+$time-animation: 1.2s;
+$delay: 0.5s;
+
+.loader {
+  opacity: 1;
+  width: 30%;
+  animation: loader 3s  ease-in ;
+
+  & #frites{
+      opacity: 0; 
+      animation: loader 3s infinite ease-in-out $delay;
+  }
+  & #haricots{
+      opacity: 0; 
+      animation: loader 3s infinite ease-in-out $delay + 0.2s;
+  }
+  & #saucisses{
+      opacity: 0; 
+      animation: loader 3s infinite ease-in-out $delay+ 0.4s;
+  }
+  & #tomates{
+      opacity: 0; 
+      animation: loader 3s infinite ease-in-out $delay+ 0.6s;
+  }
+}
+
+@keyframes loader {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
+
+

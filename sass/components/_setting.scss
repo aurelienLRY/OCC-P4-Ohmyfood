@@ -18,6 +18,9 @@ $--background-3: #353535 !default;
 
 $text-color: black !default;
 
+
+
+
 // TYPOGRAPHY
 $base-font-size: 16px !default;
 
@@ -28,17 +31,28 @@ $base-font-size: 16px !default;
 $breakpoints: (
   sm-mobile: 320px,
   md-mobile: 576px,
-  tablet: 768px,
-  desktop: 1024px,
+  tablet: 820px,
+  desktop: 1200px,
   large-desktop: 1400px,
 );
 
+// GESTION DES FICHIERS
+//      SCSS
+@use "sass:math";
+@import 'function'; // Contient les fonctions
+@import "mixins"; //  Contient les mixins
+@import "font"; // Contient les sélecteurs global pour la typographie
+@import "btn"; //  Contient les btns du site
+@import "card-process"; //Contient le component Card-process - Index.html
+@import "card-menu"; //Contient le component Card-menu - Index.html
+@import "loader"; //Contient le component Card-menu - Index.html
 
 
 * {
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: $base-font-size;
   margin: 0px;
   padding: 0px;
 
 }
+
