@@ -172,6 +172,7 @@
   border-radius: 20px 20px 0px 0px;
 }
 .card-menu__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -185,26 +186,43 @@
   line-height: normal;
   color: black;
 }
-.card-menu__heart {
+.card-menu__heart--relative {
+  position: relative;
+  z-index: 1;
+}
+.card-menu__heart--absolute {
+  z-index: 1;
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  right: 3.125rem;
+  bottom: 3.125rem;
 }
 .card-menu input {
   appearance: none;
   cursor: pointer;
   width: 1.625rem;
   height: 1.625rem;
-  position: relative;
+  position: absolute;
+  left: center;
+  top: center;
   z-index: 4;
 }
-.card-menu input:checked + svg .svg__heart--bgcolor, .card-menu input:hover + svg .svg__heart--bgcolor {
+.card-menu input:checked + svg .svg__heart--bgcolor {
   opacity: 1;
   transform: scale(1);
 }
-.card-menu input:checked + svg .svg__heart, .card-menu input:hover + svg .svg__heart {
+.card-menu input:checked + svg .svg__heart {
   opacity: 0;
   transform: scale(0);
+}
+@media (min-width: 1200px) {
+  .card-menu input:hover + svg .svg__heart--bgcolor {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .card-menu input:hover + svg .svg__heart {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 .card-menu svg {
   position: absolute;
@@ -2806,7 +2824,7 @@ header .return {
 }
 header .return i {
   color: black;
-  font-size: 23px;
+  font-size: 1.4375rem;
 }
 
 .picture {
@@ -2849,14 +2867,20 @@ header .return i {
 }
 .menu__title h1 {
   font-family: Shrikhand;
-  font-size: 1.75em;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.menu__heart {
+.menu__heart--relative {
   position: relative;
   z-index: 99;
+}
+.menu__heart--absolute {
+  z-index: 99;
+  position: absolute;
+  right: 3.125rem;
+  bottom: 3.125rem;
 }
 .menu input {
   appearance: none;
@@ -2868,13 +2892,23 @@ header .return i {
   top: center;
   z-index: 102;
 }
-.menu input:checked + svg .svg__heart--bgcolor, .menu input:hover + svg .svg__heart--bgcolor {
+.menu input:checked + svg .svg__heart--bgcolor {
   opacity: 1;
   transform: scale(1);
 }
-.menu input:checked + svg .svg__heart, .menu input:hover + svg .svg__heart {
+.menu input:checked + svg .svg__heart {
   opacity: 0;
   transform: scale(0);
+}
+@media (min-width: 1200px) {
+  .menu input:hover + svg .svg__heart--bgcolor {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .menu input:hover + svg .svg__heart {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 .menu svg {
   position: absolute;
@@ -2941,11 +2975,19 @@ header .return i {
   width: 100%;
   height: 100%;
 }
-.menu-item input:checked + .menu-item__content .menu-item__valide, .menu-item input:hover + .menu-item__content .menu-item__valide {
+.menu-item input:checked + .menu-item__content .menu-item__valide {
   margin-right: -1rem;
 }
-.menu-item input:checked + .menu-item__content .menu-item__valide i, .menu-item input:hover + .menu-item__content .menu-item__valide i {
-  animation: 350ms linear forwards rotate;
+.menu-item input:checked + .menu-item__content .menu-item__valide i {
+  animation: 400ms linear forwards rotate;
+}
+@media (min-width: 1200px) {
+  .menu-item input:hover + .menu-item__content .menu-item__valide {
+    margin-right: -1rem;
+  }
+  .menu-item input:hover + .menu-item__content .menu-item__valide i {
+    animation: 400ms linear forwards rotate;
+  }
 }
 .menu-item__content {
   box-sizing: border-box;

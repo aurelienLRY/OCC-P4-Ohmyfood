@@ -172,6 +172,7 @@
   border-radius: 20px 20px 0px 0px;
 }
 .card-menu__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -185,26 +186,43 @@
   line-height: normal;
   color: black;
 }
-.card-menu__heart {
+.card-menu__heart--relative {
+  position: relative;
+  z-index: 1;
+}
+.card-menu__heart--absolute {
+  z-index: 1;
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  right: 3.125rem;
+  bottom: 3.125rem;
 }
 .card-menu input {
   appearance: none;
   cursor: pointer;
   width: 1.625rem;
   height: 1.625rem;
-  position: relative;
+  position: absolute;
+  left: center;
+  top: center;
   z-index: 4;
 }
-.card-menu input:checked + svg .svg__heart--bgcolor, .card-menu input:hover + svg .svg__heart--bgcolor {
+.card-menu input:checked + svg .svg__heart--bgcolor {
   opacity: 1;
   transform: scale(1);
 }
-.card-menu input:checked + svg .svg__heart, .card-menu input:hover + svg .svg__heart {
+.card-menu input:checked + svg .svg__heart {
   opacity: 0;
   transform: scale(0);
+}
+@media (min-width: 1200px) {
+  .card-menu input:hover + svg .svg__heart--bgcolor {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .card-menu input:hover + svg .svg__heart {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 .card-menu svg {
   position: absolute;

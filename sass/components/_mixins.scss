@@ -9,7 +9,6 @@
   }
 }
 
-
 // TYPOGRAPHIES
 @mixin font-roboto($size: 17px, $weignt: 300) {
   font-family: Roboto !important;
@@ -39,12 +38,21 @@
 // ANIMATION & TRANSITION
 
 //mixin pour l'animation du coeur
-$z : 1 !default; 
+$z: 1 !default;
 
 @mixin heart($z) {
   &__heart {
-    position: relative;
-    z-index: $z;
+    &--relative {
+      position: relative;
+      z-index: $z;
+    }
+
+    &--absolute {
+      z-index: $z;
+      position: absolute;
+      right: rem(50);
+      bottom: rem(50) ;
+    }
   }
 
   input {
@@ -57,8 +65,7 @@ $z : 1 !default;
     top: center;
     z-index: $z + 3;
 
-    &:checked,
-    &:hover {
+    &:checked {
       & + svg {
         & .svg__heart--bgcolor {
           opacity: 1;
@@ -67,6 +74,21 @@ $z : 1 !default;
         & .svg__heart {
           opacity: 0;
           transform: scale(0);
+        }
+      }
+    }
+
+    @include media(desktop) {
+      &:hover {
+        & + svg {
+          & .svg__heart--bgcolor {
+            opacity: 1;
+            transform: scale(1);
+          }
+          & .svg__heart {
+            opacity: 0;
+            transform: scale(0);
+          }
         }
       }
     }
@@ -82,7 +104,7 @@ $z : 1 !default;
     fill: #000000;
     opacity: 1;
     transition: all 250ms ease-in-out;
-    z-index: $z+2;
+    z-index: $z + 2;
   }
 
   .svg__heart--bgcolor {
@@ -90,6 +112,6 @@ $z : 1 !default;
     transform-origin: bottom;
     transform: scale(0);
     transition: all 350ms ease-in-out;
-    z-index: $z+1;
+    z-index: $z + 1;
   }
 }

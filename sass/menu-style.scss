@@ -8,10 +8,9 @@ header {
     left: 7%;
     i {
       color: $text-color;
-      font-size: 23px;
+      font-size: rem(23);
     }
   }
-
 }
 
 .picture {
@@ -60,7 +59,7 @@ header {
     h1 {
       //style
       font-family: Shrikhand;
-      font-size: em(28);
+      font-size: rem(24);
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -71,8 +70,8 @@ header {
 
 .menu-section {
   //comportement
-  box-sizing: border-box; 
-   display: flex;
+  box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   gap: rem(12);
   //size
@@ -87,7 +86,7 @@ header {
     }
     //style
     border-bottom: solid 3px $color--sucess-1;
-     padding-bottom: rem(5);
+    padding-bottom: rem(5);
     //size
     width: rem(40);
   }
@@ -122,16 +121,26 @@ header {
     //size
     width: 100%;
     height: 100%;
-    
 
-    &:checked, &:hover
-     {
+    &:checked {
       & + .menu-item__content {
         .menu-item__valide {
           margin-right: -1rem;
-        i{
-          animation: 350ms linear forwards rotate;
+          i {
+            animation: 400ms linear forwards rotate;
+          }
         }
+      }
+    }
+    @include media(desktop) {
+      &:hover {
+        & + .menu-item__content {
+          .menu-item__valide {
+            margin-right: -1rem;
+            i {
+              animation: 400ms linear forwards rotate;
+            }
+          }
         }
       }
     }
@@ -184,6 +193,7 @@ header {
     overflow: hidden;
     transition: all 300ms ease-in-out;
     i {
+      //transform: rotate(0.5rotate); //  a tester --------------------------------------------
       color: white;
       font-size: rem(22);
     }
@@ -203,12 +213,12 @@ header {
 }
 
 @keyframes rotate {
-0%{
-  transform: rotate(0.5turn);
-}
-100%{
-   transform: rotate(0);
-}
+  0% {
+    transform: rotate(0.5turn);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 // fonction permettant de créer des séleccteurs avec delay d'animation
