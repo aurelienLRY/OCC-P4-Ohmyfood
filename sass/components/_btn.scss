@@ -1,6 +1,6 @@
 
 $base-color : $color--primary;
-$hover-color :  #ff79Da; 
+$hover-color : $color--secondary; 
 $bg-gradient : linear-gradient(0deg, $base-color 0%, $hover-color 100%);
 $amount : 2.5; 
 
@@ -8,8 +8,7 @@ $amount : 2.5;
 .btn {
   all : unset;
   // Font 
-  font-size: rem(16);
-  font-weight: 500;
+  @include font-roboto(16 , 500);
 
   // Color 
   color: white;

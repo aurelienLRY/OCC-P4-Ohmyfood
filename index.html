@@ -11,14 +11,7 @@
         content="Ohmyfood, commande de repas en ligne, menu personnalisé, gastronomie, restaurant haut de gamme, Paris, repas de qualité">
 
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
-
     <script src="https://kit.fontawesome.com/f88cf5eae9.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Ohmyfood - Commandez des repas gastronomiques en ligne à Paris</title>
@@ -89,8 +82,14 @@
                 <div class="new-restaurants">
                     <article class="card-menu ">
                         <a href="restaurants/menu-la-palette-du-gout.html">
-                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="Photo d'un plat du restaurant">
+                            <picture class="picture">  
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/palette_du_gout/-vignette-340px.webp" height = "227" width="340" type="image/webp">
+                                <source  srcset="./assets/images/restaurants/palette_du_gout/-mobile-768px.webp" height = "512" width="768" type="image/webp">
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/palette_du_gout/-vignette-340px.jpg" height = "227" width="340" type="image/jpg">
+                                <img 
+                                src="./assets/images/restaurants/palette_du_gout/-mobile-768px.jpg" height = "2935" width="4402" alt="Plat gastronomique du restaurant">
+                            </picture>
+
                             <div class="card-menu__content">
                                 <h3>
                                     La palette du goût
@@ -120,8 +119,15 @@
 
                     <article class="card-menu">
                         <a href="restaurants/menu-la-note-enchantee.html">
-                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                alt="Photo d'un plat du restaurant">
+                            <picture class="picture">  
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/la_note_enchantee/-vignette-340px.webp" height = "227" width="340" type="image/webp">
+                                <source  srcset="./assets/images/restaurants/la_note_enchantee/-mobile-768px.webp" height = "512" width="768" type="image/webp">
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/la_note_enchantee/-vignette-340px.jpg" height = "227" width="340" type="image/jpg">
+                                <img 
+                                src="./assets/images/restaurants/la_note_enchantee/-mobile-768px.jpg" height = "2935" width="4402" alt="Plat gastronomique du restaurant">
+                            </picture>
+
+
                             <div class="card-menu__content">
                                 <h3>
                                     La note enchantée
@@ -144,14 +150,20 @@
                         </div>
                     </article>
                 </div>
-              
+
 
                 <div class="result-restaurants">
 
                     <article class="card-menu ">
                         <a href="restaurants/menu-a-la-francaise.html">
-                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                alt="Photo d'un plat du restaurant">
+                            <picture class="picture">  
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/a_la_francaise/-vignette-340px.webp" height = "227" width="340" type="image/webp">
+                                <source  srcset="./assets/images/restaurants/a_la_francaise/-mobile-768px.webp" height = "512" width="768" type="image/webp">
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/a_la_francaise/-vignette-340px.jpg" height = "227" width="340" type="image/jpg">
+                                <img 
+                                src="./assets/images/restaurants/a_la_francaise/-mobile-768px.jpg" height = "2935" width="4402" alt="Plat gastronomique du restaurant">
+                            </picture>
+
                             <div class="card-menu__content">
                                 <h3>
                                     À la française
@@ -175,8 +187,14 @@
 
                     <article class="card-menu ">
                         <a href="restaurants/menu-le-delice-des-sens.html">
-                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="Photo d'un plat du restaurant">
+                            <picture class="picture">  
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/delice_des_sens/-vignette-340px.webp" height = "227" width="340" type="image/webp">
+                                <source srcset="./assets/images/restaurants/delice_des_sens/-mobile-768px.webp" height = "512" width="768" type="image/webp">
+                                <source media="(max-width:340px )" srcset="./assets/images/restaurants/delice_des_sens/-vignette-340px.jpg" height = "227" width="340" type="image/jpg">
+                                <img 
+                                src="./assets/images/restaurants/delice_des_sens/-mobile-768px.jpg" height = "2935" width="4402" alt="Plat gastronomique du restaurant">
+                            </picture>
+                 
                             <div class="card-menu__content">
                                 <h3>
                                     Le délice des sens

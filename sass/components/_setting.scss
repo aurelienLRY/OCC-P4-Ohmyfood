@@ -1,5 +1,5 @@
 //  Document regroupant les variables constituant le thème du site.
-
+@use "sass:math";
 // THEME COLORS
 $color--primary: #9356dc;
 $color--secondary: #ff79da;
@@ -38,7 +38,7 @@ $breakpoints: (
 
 // GESTION DES FICHIERS
 //      SCSS
-@use "sass:math";
+
 @import 'function'; // Contient les fonctions
 @import "mixins"; //  Contient les mixins
 @import "font"; // Contient les sélecteurs global pour la typographie

@@ -80,9 +80,9 @@ header {
 }
 
 #process {
+  box-sizing: border-box;
   max-width: rem(355);
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: rem(24);
@@ -141,12 +141,12 @@ header {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: rem(15);
 
   @include media(tablet) {
     flex-direction: row;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    gap: rem(30);
   }
 }
 
@@ -182,7 +182,7 @@ footer {
   padding: 30px 25px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 7px;
+  gap: rem(7);
   background: $--grey;
 
   @include media(tablet) {
@@ -203,13 +203,13 @@ footer {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    margin-bottom: rem(20);
+    margin-bottom: rem(7);
 
     //style
     cursor: pointer;
     color: white;
     font-family: Shrikhand;
-    font-size: 18px;
+    font-size: rem(18);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -225,7 +225,7 @@ footer {
     //comportement
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: rem(7);
 
     @include media(desktop) {
       flex-direction: row;
@@ -236,7 +236,7 @@ footer {
   li {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: rem(5);
     color: white;
     transition: color 200ms ease-in-out;
     &:hover {

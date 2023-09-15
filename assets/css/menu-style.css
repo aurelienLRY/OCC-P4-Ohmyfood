@@ -34,6 +34,15 @@
   src: url("../../assets/fonts/roboto/roboto-v30-latin-700.eot"); /* IE9 Compat Modes */
   src: url("../../assets/fonts/roboto/roboto-v30-latin-700.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/roboto/roboto-v30-latin-700.woff2") format("woff2"), url("../../assets/fonts/roboto/roboto-v30-latin-700.woff") format("woff"), url("../../assets/fonts/roboto/roboto-v30-latin-700.ttf") format("truetype"), url("../../assets/fonts/roboto/roboto-v30-latin-700.svg#Roboto") format("svg"); /* Legacy iOS */
 }
+/* shrikhand-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.woff2") format("woff2"), url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.woff") format("woff"), url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.ttf") format("truetype"), url("../../assets/fonts/Shrikhand/shrikhand-v15-latin-regular.svg#Shrikhand") format("svg"); /* Legacy iOS */
+}
 .font-title {
   font-family: Roboto !important;
   font-size: 1.5rem;
@@ -49,7 +58,7 @@
 
 .p__font {
   font-family: Roboto !important;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 300;
   font-style: normal;
   line-height: normal;
@@ -70,10 +79,14 @@
 
 .btn {
   all: unset;
+  font-family: Roboto !important;
   font-size: 1rem;
   font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: black;
   color: white;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79Da 100%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -94,7 +107,9 @@
   box-sizing: border-box;
   max-width: 20.125rem;
   max-height: 4.5rem;
-  min-width: 17.5rem;
+  width: 90%;
+  height: 90%;
+  min-width: 16.875rem;
   min-height: 3.875rem;
   padding: 0px 10px 0px 30px;
   border-radius: 1.25rem;
@@ -111,7 +126,7 @@
   background-color: #9356dc;
   border-radius: 1.5rem;
   font-family: Roboto !important;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
@@ -136,7 +151,7 @@
 }
 .card-process__content > h3 {
   font-family: Roboto !important;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
@@ -150,9 +165,10 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  max-width: 28.125rem;
-  min-width: 16.25rem;
-  width: 100%;
+  max-width: 30.625rem;
+  height: 15.6875rem;
+  width: 98%;
+  min-width: 18.75rem;
   border-radius: 0.9375rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -163,13 +179,37 @@
   display: flex;
   flex-direction: column;
 }
+.card-menu picture {
+  box-sizing: border-box;
+  min-height: 10.625rem;
+  height: 60%;
+  max-height: 14.4375rem;
+  border-radius: 20px 20px 0px 0px;
+}
+@media (min-width: 820px) {
+  .card-menu picture {
+    max-height: 10.625rem;
+  }
+}
+.card-menu picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-self: stretch;
+}
 .card-menu img {
   box-sizing: border-box;
-  min-height: 10rem;
-  max-height: 12.5rem;
+  min-height: 10.625rem;
+  height: 60%;
+  max-height: 14.4375rem;
   align-self: stretch;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+@media (min-width: 820px) {
+  .card-menu img {
+    max-height: 10.625rem;
+  }
 }
 .card-menu__content {
   position: relative;
@@ -202,8 +242,6 @@
   width: 1.625rem;
   height: 1.625rem;
   position: absolute;
-  left: center;
-  top: center;
   z-index: 4;
 }
 .card-menu input:checked + svg .svg__heart--bgcolor {
@@ -226,7 +264,6 @@
 }
 .card-menu svg {
   position: absolute;
-  left: -1px;
   height: 1.625rem;
 }
 .card-menu .svg__heart {
@@ -275,11 +312,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   width: 80%;
   padding: 2% 0;
   font-family: Roboto !important;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   font-style: normal;
   line-height: normal;
@@ -288,7 +325,7 @@
   background-color: #f6f6f6;
   border: 0.125rem solid #777777;
   box-shadow: 9.5px 9px 9px -3.5px #343434;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 @media (min-width: 1200px) {
   .loader__content {
@@ -2598,7 +2635,7 @@ header img {
 }
 .locate__content input::placeholder {
   font-family: Roboto !important;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
@@ -2625,9 +2662,9 @@ header img {
 }
 
 #process {
+  box-sizing: border-box;
   max-width: 22.1875rem;
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -2682,14 +2719,14 @@ header img {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 @media (min-width: 820px) {
   .new-restaurants,
   .result-restaurants {
     flex-direction: row;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    gap: 1.875rem;
   }
 }
 
@@ -2718,7 +2755,7 @@ footer {
   padding: 30px 25px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 7px;
+  gap: 0.4375rem;
   background: #353535;
 }
 @media (min-width: 820px) {
@@ -2740,11 +2777,11 @@ footer .logo {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.4375rem;
   cursor: pointer;
   color: white;
   font-family: Shrikhand;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -2762,7 +2799,7 @@ footer .logo {
 footer ul {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0.4375rem;
 }
 @media (min-width: 1200px) {
   footer ul {
@@ -2773,7 +2810,7 @@ footer ul {
 footer li {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   color: white;
   transition: color 200ms ease-in-out;
 }
@@ -2862,15 +2899,27 @@ header .return i {
 .menu__title {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 39.375rem;
 }
 .menu__title h1 {
-  font-family: Shrikhand;
+  font-family: Shrikhand !important;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (min-width: 820px) {
+  .menu__title {
+    justify-content: center;
+  }
+}
+.menu__heart--container {
+  display: flex;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 .menu__heart--relative {
   position: relative;
@@ -2888,8 +2937,6 @@ header .return i {
   width: 1.625rem;
   height: 1.625rem;
   position: absolute;
-  left: center;
-  top: center;
   z-index: 102;
 }
 .menu input:checked + svg .svg__heart--bgcolor {
@@ -2912,7 +2959,6 @@ header .return i {
 }
 .menu svg {
   position: absolute;
-  left: -1px;
   height: 1.625rem;
 }
 .menu .svg__heart {
@@ -2945,7 +2991,7 @@ header .return i {
 .menu-section__title h2 {
   all: unset;
   font-family: Roboto !important;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   line-height: normal;
@@ -2962,7 +3008,7 @@ header .return i {
   overflow: hidden;
   width: 100%;
   height: 4.3125rem;
-  animation: 900ms cubic-bezier(0.32, 0.16, 0, 0.91) forwards menu_item;
+  animation: 850ms cubic-bezier(0.32, 0.16, 0, 0.91) both menu_item;
 }
 .menu-item input {
   position: absolute;
@@ -2979,14 +3025,14 @@ header .return i {
   margin-right: -1rem;
 }
 .menu-item input:checked + .menu-item__content .menu-item__valide i {
-  animation: 400ms linear forwards rotate;
+  transform: rotate(0);
 }
 @media (min-width: 1200px) {
   .menu-item input:hover + .menu-item__content .menu-item__valide {
     margin-right: -1rem;
   }
   .menu-item input:hover + .menu-item__content .menu-item__valide i {
-    animation: 400ms linear forwards rotate;
+    transform: rotate(0);
   }
 }
 .menu-item__content {
@@ -3010,7 +3056,7 @@ header .return i {
 }
 .menu-item__text > h3 {
   font-family: Roboto !important;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
@@ -3023,7 +3069,7 @@ header .return i {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-family: Roboto !important;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   font-style: normal;
   line-height: normal;
@@ -3038,9 +3084,11 @@ header .return i {
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
   overflow: hidden;
-  transition: all 300ms ease-in-out;
+  transition: all 380ms ease-in-out;
 }
 .menu-item__valide i {
+  transition: all 380ms ease-in-out;
+  transform: rotate(180deg);
   color: white;
   font-size: 1.375rem;
 }
@@ -3055,52 +3103,24 @@ header .return i {
     transform: translateX(0);
   }
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(0.5turn);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .delay-1 {
   animation-delay: 0s;
 }
 
 .delay-2 {
-  animation-delay: 0.1s;
+  animation-delay: 0.15s;
 }
 
 .delay-3 {
-  animation-delay: 0.2s;
-}
-
-.delay-4 {
   animation-delay: 0.3s;
 }
 
+.delay-4 {
+  animation-delay: 0.45s;
+}
+
 .delay-5 {
-  animation-delay: 0.4s;
-}
-
-.delay-6 {
-  animation-delay: 0.5s;
-}
-
-.delay-7 {
   animation-delay: 0.6s;
-}
-
-.delay-8 {
-  animation-delay: 0.7s;
-}
-
-.delay-9 {
-  animation-delay: 0.8s;
-}
-
-.delay-10 {
-  animation-delay: 0.9s;
 }
 
 /*# sourceMappingURL=menu-style.css.map */

@@ -3,7 +3,10 @@
   box-sizing: border-box;
   max-width: rem(322);
   max-height: rem(72);
-  min-width: rem(280);
+  width: 90%;
+  height: 90%;
+
+  min-width: rem(270);
   min-height: rem(62);
   padding: 0px 10px 0px 30px;
   border-radius: rem(20);
@@ -25,7 +28,7 @@
     //style
     background-color: $color--primary;
     border-radius: rem(24);
-    @include font-roboto(14px, 500);
+    @include font-roboto(14, 500);
     color: white;
     //comportement
     display: flex;
@@ -49,11 +52,11 @@
     }
 
     & > h3 {
-      @include font-roboto(16px, 500);
+      @include font-roboto(16, 500);
     }
   }
 
-  &:nth-child(3) i{
-      color: $color--primary;
+  &:nth-child(3) i {
+    color: $color--primary;
   }
 }

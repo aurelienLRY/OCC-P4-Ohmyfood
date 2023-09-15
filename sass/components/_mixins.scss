@@ -10,30 +10,15 @@
 }
 
 // TYPOGRAPHIES
-@mixin font-roboto($size: 17px, $weignt: 300) {
+@mixin font-roboto($size: 17, $weight: 300) {
   font-family: Roboto !important;
-  font-size: $size;
-  font-weight: $weignt;
+  font-size: rem($size);
+  font-weight: $weight;
   font-style: normal;
   line-height: normal;
   color: $text-color;
 }
 
-@mixin font-title_menu {
-  font-family: Roboto;
-  font-style: normal;
-  line-height: normal;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-@mixin font-sub_title_menu {
-  font-family: Roboto;
-  font-style: normal;
-  line-height: normal;
-  font-size: 17px;
-  font-weight: 300;
-}
 
 // ANIMATION & TRANSITION
 
@@ -51,7 +36,7 @@ $z: 1 !default;
       z-index: $z;
       position: absolute;
       right: rem(50);
-      bottom: rem(50) ;
+      bottom: rem(50);
     }
   }
 
@@ -61,8 +46,7 @@ $z: 1 !default;
     width: rem(26);
     height: rem(26);
     position: absolute;
-    left: center;
-    top: center;
+
     z-index: $z + 3;
 
     &:checked {
@@ -96,7 +80,6 @@ $z: 1 !default;
 
   svg {
     position: absolute;
-    left: -1px;
     height: rem(26);
   }
 
