@@ -1,3 +1,6 @@
+@use '../abstracts' as * ;
+
+
 
 /* roboto-300 - latin */
 @font-face {
@@ -77,7 +80,7 @@
 .p__font {
   @include font-roboto();
   &--grey{
-    color: $--grey;
+    color: $grey;
   }
   &--18 {
     font-size: rem(18);

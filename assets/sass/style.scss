@@ -1,32 +1,15 @@
 // GESTION DES FICHIERS
 //      SCSS
-@import "components/setting"; // Setting permet la gestion des éléments du CSS et l'import des différents components.
+@use "abstracts" as *; // Setting permet la gestion des éléments du CSS et l'import des différents components.
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+@use "layout";
+@use "layout/loader";
 
-main {
-  width: 100%;
-}
 
-header {
-  // Behavior
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@use "components/btn";
+@use "components/card-menu";
+@use "components/card-process";
 
-  // Size
-  width: 100%;
-
-  img {
-    height: rem(25);
-    padding: 14px 0px 14px 0px;
-  }
-}
 
 .locate {
   // Behavior
@@ -36,7 +19,7 @@ header {
   align-items: center;
   justify-content: center;
   //style
-  background-color: $--background-2;
+  background-color: $background-2;
   box-shadow: inset 0 5px 10px -10px;
 
   &__content {
@@ -48,7 +31,7 @@ header {
       all: unset;
       width: 60%;
       //style
-      background-color: $--background-2;
+      background-color: $background-2;
 
       &::placeholder {
         @include font-roboto(16px, 500);
@@ -74,7 +57,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $--background;
+  background-color: $background;
   gap: rem(20);
   padding: rem(30) rem(20) rem(70) rem(20);
 }
@@ -112,7 +95,7 @@ header {
 
 .restaurants {
   //styles
-  background-color: $--background-2;
+  background-color: $background-2;
 
   &__content {
     //comportements
@@ -174,104 +157,3 @@ header {
   z-index: 2;
 }
 
-//---------------------FOOTER-----------------------
-footer {
-  box-sizing: border-box;
-  display: flex;
-  width: 100%;
-  padding: 30px 25px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: rem(7);
-  background: $--grey;
-
-  @include media(tablet) {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  @include media(desktop) {
-    flex-direction: row;
-    justify-content: end;
-    gap: rem(45);
-  }
-
-  .logo {
-    all: unset;
-    // comportement
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    margin-bottom: rem(7);
-
-    //style
-    cursor: pointer;
-    color: white;
-    font-family: Shrikhand;
-    font-size: rem(18);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    @include media(tablet) {
-      margin: 0;
-    }
-    @include media(desktop) {
-      margin-left: rem(60);
-    }
-  }
-  ul {
-    //comportement
-    display: flex;
-    flex-direction: column;
-    gap: rem(7);
-
-    @include media(desktop) {
-      flex-direction: row;
-      gap: rem(20);
-    }
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-    gap: rem(5);
-    color: white;
-    transition: color 200ms ease-in-out;
-    &:hover {
-      color: $color--secondary;
-    }
-    a {
-      all: unset;
-      cursor: pointer;
-    }
-  }
-
-  .item1 {
-    @include media(tablet) {
-      order: 2;
-    }
-    @include media(desktop) {
-      order: 3;
-    }
-  }
-
-  .item2 {
-    @include media(tablet) {
-      order: 1;
-    }
-    @include media(desktop) {
-      order: 1;
-    }
-  }
-
-  .item3 {
-    @include media(tablet) {
-      order: 3;
-    }
-    @include media(desktop) {
-      order: 2;
-    }
-  }
-}

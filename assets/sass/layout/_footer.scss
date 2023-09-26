@@ -1,0 +1,103 @@
+@use '../abstracts' as * ;
+
+//---------------------FOOTER-----------------------
+footer {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 30px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(7);
+    background: $grey;
+  
+    @include media(tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    @include media(desktop) {
+      flex-direction: row;
+      justify-content: end;
+      gap: rem(45);
+    }
+  
+    .logo {
+      all: unset;
+      // comportement
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(7);
+  
+      //style
+      cursor: pointer;
+      color: white;
+      font-family: Shrikhand;
+      font-size: rem(18);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  
+      @include media(tablet) {
+        margin: 0;
+      }
+      @include media(desktop) {
+        margin-left: rem(60);
+      }
+    }
+    ul {
+      //comportement
+      display: flex;
+      flex-direction: column;
+      gap: rem(7);
+  
+      @include media(desktop) {
+        flex-direction: row;
+        gap: rem(20);
+      }
+    }
+  
+    li {
+      display: flex;
+      align-items: center;
+      gap: rem(5);
+      color: white;
+      transition: color 200ms ease-in-out;
+      &:hover {
+        color: $color--secondary;
+      }
+      a {
+        all: unset;
+        cursor: pointer;
+      }
+    }
+  
+    .item1 {
+      @include media(tablet) {
+        order: 2;
+      }
+      @include media(desktop) {
+        order: 3;
+      }
+    }
+  
+    .item2 {
+      @include media(tablet) {
+        order: 1;
+      }
+      @include media(desktop) {
+        order: 1;
+      }
+    }
+  
+    .item3 {
+      @include media(tablet) {
+        order: 3;
+      }
+      @include media(desktop) {
+        order: 2;
+      }
+    }
+  }

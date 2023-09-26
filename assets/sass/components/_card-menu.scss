@@ -1,3 +1,6 @@
+@use '../abstracts' as *;
+
+
 //fichier réunissant les sélecteurs pour Card-menu
 .card-menu {
   box-sizing: border-box;
@@ -18,7 +21,6 @@
     flex-direction: column;
   }
 
-  //TODO:  poursuivre picture
 
 picture{
     box-sizing: border-box;

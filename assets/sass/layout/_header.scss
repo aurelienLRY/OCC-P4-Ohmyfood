@@ -1,0 +1,18 @@
+@use '../abstracts' as *; 
+
+header {
+    // Behavior
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    // Size
+    width: 100%;
+  
+    img {
+      height: rem(25);
+      padding: 14px 0px 14px 0px;
+    }
+  }
+  

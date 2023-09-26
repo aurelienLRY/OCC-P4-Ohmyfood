@@ -1,3 +1,7 @@
+@use '../abstracts' as *;
+
+
+
 .card-process {
   //forme
   box-sizing: border-box;
@@ -18,7 +22,7 @@
   position: relative;
 
   //style
-  background-color: $--background;
+  background-color: $background;
   box-shadow: 0px 3px 15px -10px;
 
   &__round {
@@ -47,7 +51,7 @@
 
     & > i {
       font-size: rem(19);
-      color: $--grey-1;
+      color: $grey-1;
     }
 
     & > h3 {

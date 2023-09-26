@@ -1,3 +1,6 @@
+@use '../abstracts' as *;
+
+
 $time-animation: 1.8s;
 $delay: 0.2s;
 
@@ -6,8 +9,8 @@ $delay: 0.2s;
   transform: scale(0);
   width: 30%;
   //styles
-  background-color: rgba($color: #000000, $alpha: 0.6);
-  backdrop-filter: blur(5px);
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(15px);
   //comportement
   position: fixed;
   left: 0;
@@ -65,9 +68,9 @@ $delay: 0.2s;
 
     //style
     text-align: center;
-    background-color: $--background;
-    border: rem(2) solid darken($--background, 50);
-    box-shadow: 9.5px 9px 9px -3.5px darken($--background-3, 0.25);
+    background-color: $background;
+    border: rem(2) solid darken($background, 50);
+    box-shadow: 9.5px 9px 9px -3.5px darken($background-3, 0.25);
     border-radius: rem(20);
 
     animation: 450ms  linear both content;
