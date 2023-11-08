@@ -51,5 +51,5 @@ Toujours dans le rôle de Paul, votre évaluateur vous posera des questions. Il 
 ### Debrief (5 minutes)
 À la fin de la soutenance, l'évaluateur arrêtera de jouer le rôle de Paul pour vous permettre de débriefer ensemble.
 
-
-
+## Évaluation
+![p4](https://github.com/aurelienLRY/OCC-P4-Ohmyfood/assets/83220559/2e778479-640c-4ee0-8e76-fc38c5eea793)
